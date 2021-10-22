@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Pomodoro-React-Hooks/static/css/main.f9cf8d2d.chunk.css",
+    "main.css": "/Pomodoro-React-Hooks/static/css/main.b6235962.chunk.css",
     "main.js": "/Pomodoro-React-Hooks/static/js/main.c1d9d7c6.chunk.js",
     "main.js.map": "/Pomodoro-React-Hooks/static/js/main.c1d9d7c6.chunk.js.map",
     "runtime-main.js": "/Pomodoro-React-Hooks/static/js/runtime-main.717b9898.js",
@@ -12,14 +12,14 @@
     "static/js/3.c92dd7a7.chunk.js.map": "/Pomodoro-React-Hooks/static/js/3.c92dd7a7.chunk.js.map",
     "index.html": "/Pomodoro-React-Hooks/index.html",
     "static/css/2.6c0f60ba.chunk.css.map": "/Pomodoro-React-Hooks/static/css/2.6c0f60ba.chunk.css.map",
-    "static/css/main.f9cf8d2d.chunk.css.map": "/Pomodoro-React-Hooks/static/css/main.f9cf8d2d.chunk.css.map",
+    "static/css/main.b6235962.chunk.css.map": "/Pomodoro-React-Hooks/static/css/main.b6235962.chunk.css.map",
     "static/js/2.6d818620.chunk.js.LICENSE.txt": "/Pomodoro-React-Hooks/static/js/2.6d818620.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.717b9898.js",
     "static/css/2.6c0f60ba.chunk.css",
     "static/js/2.6d818620.chunk.js",
-    "static/css/main.f9cf8d2d.chunk.css",
+    "static/css/main.b6235962.chunk.css",
     "static/js/main.c1d9d7c6.chunk.js"
   ]
 }
