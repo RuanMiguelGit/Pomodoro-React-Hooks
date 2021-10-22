@@ -7,14 +7,16 @@ import '../Styles/CountDown.css'
 
 function CountDown() {
   const {
-    workTime,
-    relaxTime,
-    setHideSetting, 
+  workTime,
+  relaxTime,
+  setHideSetting, 
+  Paused,
+  setPaused,
+  mode, 
+  setMode,
+  TimeLeft,
+  setTimeLeft
   } = useContext(appContext);
-
-  const [Paused, setPaused] = useState(true);
-  const [mode, setMode] = useState('work')
-  const [TimeLeft, setTimeLeft] = useState(0);
 
   const TimeLeftRef = useRef(TimeLeft);
   const PausedRef = useRef(Paused);
@@ -67,7 +69,7 @@ function CountDown() {
   if(segundos < 10) segundos = '0'+segundos;
 
   return (
-    <div style={{ width: 500, height: 500, marginLeft:550}}>
+    <div className='countDown'>
       <CircularProgressbar
         value={graph}
         text={minutos + ':' + segundos}

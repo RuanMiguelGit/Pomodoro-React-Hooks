@@ -6,7 +6,10 @@ import appContext from './appContext';
 function Provider({ children }) {
   const [workTime, setWorkTime] = useState(25)
   const [relaxTime, setRelaxTime ] = useState(5)
-  const [hideSetting, setHideSetting] = useState(true)
+  const [hideSetting, setHideSetting] = useState(false)
+  const [Paused, setPaused] = useState(true);
+  const [mode, setMode] = useState('work')
+  const [TimeLeft, setTimeLeft] = useState(0);
 
   const contextValue = {
    workTime,
@@ -14,7 +17,13 @@ function Provider({ children }) {
    setWorkTime,
    setRelaxTime,
    hideSetting,
-   setHideSetting
+   setHideSetting,
+   Paused,
+   setPaused,
+   mode, 
+   setMode,
+   TimeLeft,
+   setTimeLeft
   };
 
   return (
