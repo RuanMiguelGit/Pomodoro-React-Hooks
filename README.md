@@ -1,7 +1,7 @@
 
 
 # Boas vindas ao repositório do projeto de App Pomodoro
-<img src="https://media.giphy.com/media/il081AswSyUPN5YSgS/giphy.gif" />  <img src="https://media.giphy.com/media/il081AswSyUPN5YSgS/giphy.gif" />  
+<img src="https://media.giphy.com/media/NbOqGGbR8WnpvOvY81/giphy.gif" />  <img src="https://media.giphy.com/media/il081AswSyUPN5YSgS/giphy.gif" />  
 
 
 
