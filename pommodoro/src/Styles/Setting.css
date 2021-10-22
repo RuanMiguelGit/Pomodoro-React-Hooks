@@ -1,0 +1,61 @@
+.minute-slider {
+    background-color: rgb(255, 4, 4);
+    height: 40px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 50%;
+    margin-left: 25%;
+
+}
+
+.thumb {
+    background-color: rgb(3, 1, 1);
+    width: 40px;
+    height: 40px;
+    cursor:  pointer;
+    border-radius: 30px;
+}
+
+.break-slider {
+    background-color: rgb(9, 82, 104);
+    height: 40px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.break-slider .thumb {
+    background-color: rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    cursor:  pointer;
+    border-radius: 30px;
+}
+
+.label-work{
+    color: white;
+    text-decoration: bold;
+    font-size: 20px;
+    margin-left: 25%;
+}
+
+.sliders-container {
+    margin-top: 15%;
+}
+
+.SettingButton{
+    background-color: #000000; /* Green */
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    height: 20%;
+    margin-left: 35%;
+    margin-top: 2.5%;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    width: 28%;
+}

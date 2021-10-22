@@ -1,0 +1,48 @@
+* {
+    background-color:rgb(5, 40, 51);
+}
+.BtnStart {
+background-color: #fc0015; /* Green */
+border: none;
+border-radius: 2%;
+box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+color: rgb(0, 0, 0);
+display: inline-block;
+font-size: 16px;
+height: 20%;
+margin-left: 25%;
+padding: 10px 22px;
+text-align: center;
+width: 50%;
+}
+
+.BtnPause {
+background-color: #18ff3f; /* Green */
+border: none;
+border-radius: 2%;
+box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+color: white;
+display: inline-block;
+font-size: 16px;
+height: 20%;
+margin-left: 25%;
+padding: 10px 22px;
+text-align: center;
+text-decoration: none;
+width: 50%;
+}
+
+.Config {
+background-color: #ffffff; /* Green */
+border: none;
+box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+color: rgb(0, 0, 0);
+display: inline-block;
+font-size: 16px;
+height: 20%;
+margin-left: 35%;
+padding: 10px 22px;
+text-align: center;
+text-decoration: none;
+width: 28%;
+}
