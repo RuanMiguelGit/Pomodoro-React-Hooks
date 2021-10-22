@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ReduxWallet/static/css/main.681940d1.chunk.css",
+    "main.js": "/ReduxWallet/static/js/main.ec1b84ca.chunk.js",
+    "main.js.map": "/ReduxWallet/static/js/main.ec1b84ca.chunk.js.map",
+    "runtime-main.js": "/ReduxWallet/static/js/runtime-main.807b0bd8.js",
+    "runtime-main.js.map": "/ReduxWallet/static/js/runtime-main.807b0bd8.js.map",
+    "static/css/2.6c0f60ba.chunk.css": "/ReduxWallet/static/css/2.6c0f60ba.chunk.css",
+    "static/js/2.6d818620.chunk.js": "/ReduxWallet/static/js/2.6d818620.chunk.js",
+    "static/js/2.6d818620.chunk.js.map": "/ReduxWallet/static/js/2.6d818620.chunk.js.map",
+    "static/js/3.c92dd7a7.chunk.js": "/ReduxWallet/static/js/3.c92dd7a7.chunk.js",
+    "static/js/3.c92dd7a7.chunk.js.map": "/ReduxWallet/static/js/3.c92dd7a7.chunk.js.map",
+    "index.html": "/ReduxWallet/index.html",
+    "static/css/2.6c0f60ba.chunk.css.map": "/ReduxWallet/static/css/2.6c0f60ba.chunk.css.map",
+    "static/css/main.681940d1.chunk.css.map": "/ReduxWallet/static/css/main.681940d1.chunk.css.map",
+    "static/js/2.6d818620.chunk.js.LICENSE.txt": "/ReduxWallet/static/js/2.6d818620.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.807b0bd8.js",
+    "static/css/2.6c0f60ba.chunk.css",
+    "static/js/2.6d818620.chunk.js",
+    "static/css/main.681940d1.chunk.css",
+    "static/js/main.ec1b84ca.chunk.js"
+  ]
+}
