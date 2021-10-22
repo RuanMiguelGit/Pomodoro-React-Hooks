@@ -93,6 +93,10 @@ function CountDown() {
         className='Config'
         onClick={() => setHideSetting(true)} />
       </div>
+      <Button
+        title='Zerar'
+        className='Zerar'
+        onClick={() => setTimeLeft(25 * 60)} />
     </div>
   );
 }

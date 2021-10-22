@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import appContext from './appContext';
 
 function Provider({ children }) {
-  const [workTime, setWorkTime] = useState(15)
+  const [workTime, setWorkTime] = useState(25)
   const [relaxTime, setRelaxTime ] = useState(5)
   const [hideSetting, setHideSetting] = useState(true)
 
