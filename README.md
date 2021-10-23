@@ -28,6 +28,9 @@
 </p>
 </div>
 
+# Observação
+<p> Esse projeto teve como base os projetos https://github.com/dejwid/react-pomodoro-timer e https://github.com/Siphiwo/pomodoro-app-with-react/tree/master
+
 # Como Rodar o projeto
 <ol>
   <ul>
