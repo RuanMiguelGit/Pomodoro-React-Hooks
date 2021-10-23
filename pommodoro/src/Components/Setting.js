@@ -6,7 +6,7 @@ import Button from './Button';
 
 export default function Setting() {
 
-  const {workTime, relaxTime, setWorkTime, setRelaxTime, setHideSetting} = useContext(appContext)
+  const { workTime, relaxTime, setWorkTime, setRelaxTime, setHideSetting } = useContext(appContext)
 
   return (
     <div className='sliders-container'>

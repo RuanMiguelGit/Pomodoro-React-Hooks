@@ -1,7 +1,10 @@
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import { tick, WorkBreak, graphy, clock } from '../Libs/lib'
 import 'react-circular-progressbar/dist/styles.css';
 import Button from '../Components/Button'
-import {useContext, useEffect, useRef} from "react";
+import PlayPauseComponent from '../Components/PlayPauseComponent'
+import ResetComponent from './ResetComponent';
+import {useContext, useEffect} from "react";
 import appContext from '../context/appContext';
 import '../Styles/CountDown.css'
 
@@ -10,33 +13,15 @@ function CountDown() {
   workTime,
   relaxTime,
   setHideSetting, 
-  Paused,
-  setPaused,
   mode, 
   setMode,
   TimeLeft,
-  setTimeLeft
+  setTimeLeft,
+  PausedRef,
+  TimeLeftRef,
+  modeRef
   } = useContext(appContext);
 
-  const TimeLeftRef = useRef(TimeLeft);
-  const PausedRef = useRef(Paused);
-  const modeRef = useRef(mode);
-
-  function tick() {
-    TimeLeftRef.current--;
-    setTimeLeft(TimeLeftRef.current);
-  }
-
-  function WorkBreak() {
-    const newMode = modeRef.current === 'work' ? 'break' : 'work';
-    const newTimerMode = (newMode === 'work' ? workTime : relaxTime) * 60;
-
-    setMode(newMode);
-    modeRef.current = newMode;
-
-    setTimeLeft(newTimerMode);
-    TimeLeftRef.current = newTimerMode;
-  }
 
   useEffect(() => {
     TimeLeftRef.current = workTime * 60;
@@ -47,63 +32,40 @@ function CountDown() {
         return;
       }
       if (TimeLeftRef.current === 0) {
-        return WorkBreak();
+        return WorkBreak(modeRef, workTime, relaxTime, setMode, setTimeLeft, TimeLeftRef);
       }
-
-      tick();
+      tick( TimeLeftRef, setTimeLeft);
     },1000);
 
     return () => clearInterval(timeDealer);
   }, [workTime]);
+   
+  const graph = graphy(mode, workTime, relaxTime, TimeLeft)
+  const { minutos, segundos } = clock(TimeLeft)
 
-  const total = mode === 'work'
-    ? workTime * 60
-    : relaxTime * 60;
-  const graph = Math.round(TimeLeft / total * 100);
-
-  const minutos = Math.floor(TimeLeft / 60);
-  let segundos = TimeLeft % 60;
-  if(segundos < 10) segundos = '0'+segundos;
-
+  
   return (
     <div className='countDown'>
       <CircularProgressbar
-        value={graph}
-        text={minutos + ':' + segundos}
+        value={ graph }
+        text={ minutos + ':' + segundos }
         styles={buildStyles({
         textColor:'black',
         pathColor:mode === 'work' ? 'red' : '#00d35f',
         tailColor:'black',
       })} />
       <div className='buttons-container'>
-        {Paused
-          ? <Button 
-          title='Começar'
-          className='BtnStart'
-          onClick={() => { setPaused(false); PausedRef.current = false; }} />
-          : <Button 
-          className='BtnPause'
-            title='Parar'
-          onClick={() => { setPaused(true); PausedRef.current = true; }} />}
+        <PlayPauseComponent />
       </div>
-      <div className='buttons-container'>
+      <div className='buttons-container'> 
         <Button
         title='Configurações'
         className='Config'
-        onClick={() => setHideSetting(true)} />
+        onClick={ () => setHideSetting(true) } />
       </div>
-      { 
-      modeRef.current === 'work' ?
-      <Button
-        title='Zerar'
-        className='Zerar'
-        onClick={() => TimeLeftRef.current = 25 * 60} />
-      :
-      <Button
-        title='Zerar Descanco'
-        className='Zerar'
-        onClick={() => TimeLeftRef.current = 5 * 60} />
-      } 
+      <div className='buttons-container'>
+        <ResetComponent />
+      </div>
       </div>
   );
 }

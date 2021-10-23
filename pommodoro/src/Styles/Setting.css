@@ -33,7 +33,7 @@
     border-radius: 30px;
 }
 
-.label-work{
+.label-work {
     color: white;
     text-decoration: bold;
     font-size: 20px;
@@ -44,8 +44,8 @@
     margin-top: 15%;
 }
 
-.SettingButton{
-    background-color: #000000; /* Green */
+.SettingButton {
+    background-color: #000000; 
     border: none;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: white;

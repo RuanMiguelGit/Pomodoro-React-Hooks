@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import appContext from './appContext';
 
@@ -10,6 +10,9 @@ function Provider({ children }) {
   const [Paused, setPaused] = useState(true);
   const [mode, setMode] = useState('work')
   const [TimeLeft, setTimeLeft] = useState(0);
+  const PausedRef = useRef(Paused);
+  const TimeLeftRef = useRef(TimeLeft);
+  const modeRef = useRef(mode);
 
   const contextValue = {
    workTime,
@@ -23,7 +26,10 @@ function Provider({ children }) {
    mode, 
    setMode,
    TimeLeft,
-   setTimeLeft
+   setTimeLeft,
+   PausedRef,
+   TimeLeftRef,
+   modeRef
   };
 
   return (
