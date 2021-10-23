@@ -1,8 +1,8 @@
 * {
-    background-color:rgb(5, 40, 51);
+background-color:rgb(5, 40, 51);
 }
 .BtnStart {
-background-color: #fc0015; /* Green */
+background-color: #fc0015; 
 border: none;
 border-radius: 2%;
 box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -17,7 +17,7 @@ width: 50%;
 }
 
 .BtnPause {
-background-color: #18ff3f; /* Green */
+background-color: #18ff3f; 
 border: none;
 border-radius: 2%;
 box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -64,7 +64,11 @@ width: 28%;
 }
 
 .countDown {
-    width: 400px;
-    height: 400px;
-    margin-left:450px;
+height: 400px;
+margin-left:450px;
+width: 400px;
+}
+
+.buttons-container{
+margin-top: 30px;
 }

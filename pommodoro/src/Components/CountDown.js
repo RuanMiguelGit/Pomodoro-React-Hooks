@@ -1,7 +1,7 @@
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import Button from '../Components/Button'
-import {useContext, useState, useEffect, useRef} from "react";
+import {useContext, useEffect, useRef} from "react";
 import appContext from '../context/appContext';
 import '../Styles/CountDown.css'
 
@@ -28,20 +28,17 @@ function CountDown() {
   }
 
   function WorkBreak() {
-    const nextMode = modeRef.current === 'work' ? 'break' : 'work';
-    const nextSeconds = (nextMode === 'work' ? workTime : relaxTime) * 60;
+    const newMode = modeRef.current === 'work' ? 'break' : 'work';
+    const newTimerMode = (newMode === 'work' ? workTime : relaxTime) * 60;
 
-    setMode(nextMode);
-    modeRef.current = nextMode;
+    setMode(newMode);
+    modeRef.current = newMode;
 
-    setTimeLeft(nextSeconds);
-    TimeLeftRef.current = nextSeconds;
+    setTimeLeft(newTimerMode);
+    TimeLeftRef.current = newTimerMode;
   }
 
   useEffect(() => {
-
-    WorkBreak()
-
     TimeLeftRef.current = workTime * 60;
     setTimeLeft(TimeLeftRef.current);
 
@@ -75,10 +72,10 @@ function CountDown() {
         text={minutos + ':' + segundos}
         styles={buildStyles({
         textColor:'black',
-        pathColor:mode === 'work' ? '#00d35f' : 'red',
+        pathColor:mode === 'work' ? 'red' : '#00d35f',
         tailColor:'black',
       })} />
-      <div style={{marginTop:'20px'}}>
+      <div className='buttons-container'>
         {Paused
           ? <Button 
           title='Começar'
@@ -89,17 +86,25 @@ function CountDown() {
             title='Parar'
           onClick={() => { setPaused(true); PausedRef.current = true; }} />}
       </div>
-      <div style={{marginTop:'20px'}}>
+      <div className='buttons-container'>
         <Button
         title='Configurações'
         className='Config'
         onClick={() => setHideSetting(true)} />
       </div>
+      { 
+      modeRef.current === 'work' ?
       <Button
         title='Zerar'
         className='Zerar'
-        onClick={() => setTimeLeft(25 * 60)} />
-    </div>
+        onClick={() => TimeLeftRef.current = 25 * 60} />
+      :
+      <Button
+        title='Zerar Descanco'
+        className='Zerar'
+        onClick={() => TimeLeftRef.current = 5 * 60} />
+      } 
+      </div>
   );
 }
 
